@@ -29,6 +29,10 @@ body {
     grid-column: span 2;
 }
 
+.flex-container {
+    display: flex;
+}
+
 nav {
     background-color: #2974ff;
     color: #FFF;
@@ -48,6 +52,7 @@ nav > a {
 header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 2.5rem;
 }
 
 main {
