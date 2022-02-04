@@ -88,4 +88,34 @@ header>.flex-container {
 
 main {
     background-color: #f0faff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+#project-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: .5rem;
+    -webkit-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+#announcement-list {
+    display: grid;
+    height: 90%;
+}
+
+#trending-list {
+    display: grid;
+    height: 100%;
 }
