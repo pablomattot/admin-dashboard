@@ -21,6 +21,10 @@ body {
     grid-template-rows: 170px 1fr;
 }
 
+.grid-container {
+    display: grid;
+}
+
 .grid-row-span-2 {
     grid-row: span 2;
 }
@@ -32,7 +36,6 @@ body {
 nav {
     background-color: #4093ff;
     color: #FFF;
-    display: grid;
     grid-template-rows: 4.5rem repeat(9, 2rem);
     row-gap: 1rem;
     padding: 1.5rem;
@@ -47,7 +50,6 @@ nav>a {
 }
 
 header {
-    display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1rem 2.5rem;
     -webkit-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.2);
@@ -88,7 +90,6 @@ header>.flex-container {
 
 main {
     background-color: #f0faff;
-    display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 2rem 1rem;
     gap: 1rem;
@@ -96,10 +97,19 @@ main {
 }
 
 #project-cards {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
     gap: 1.5rem;
+}
+
+#project-cards .card {
+    -webkit-box-shadow: inset 8px 0px 0px 0px #ffa41d;
+    box-shadow: inset 8px 0px 0px 0px #ffa41d;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .card {
@@ -110,12 +120,19 @@ main {
     padding: 1.5rem;
 }
 
+.card>p {
+    font-size: .9rem;
+    color: #414141;
+}
+
 #announcement-list {
-    display: grid;
     height: 90%;
+}
+#announcement-list>article>p {
+    font-size: .8rem;
+    color: #414141;
 }
 
 #trending-list {
-    display: grid;
     height: 100%;
 }
