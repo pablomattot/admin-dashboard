@@ -36,13 +36,26 @@ body {
 nav {
     background-color: #4093ff;
     color: #FFF;
-    grid-template-rows: 4.5rem repeat(9, 2rem);
-    row-gap: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     z-index: 2;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
 }
 
-nav>a {
+nav>div {
+    gap: 1rem;
+}
+
+svg {
+    fill: white;
+}
+
+nav>div>* {
+    display: flex;
+    gap: 1rem;
+}
+
+nav>div>a {
     text-decoration: none;
     color: #FFF;
     font-weight: bold;
@@ -76,6 +89,22 @@ header>.flex-container {
     justify-content: end;
 }
 
+.avatar {
+    background-color: #ffa41d;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.welcome>.avatar {
+    height: 4rem;
+    width: 4rem;
+}
+
 .buttons>button {
     border: none;
     border-radius: 2rem;
@@ -90,21 +119,22 @@ header>.flex-container {
 
 main {
     background-color: #f0faff;
-    grid-template-columns: 2fr 1fr;
-    padding: 2rem 1rem;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem;
     gap: 1rem;
-    margin-bottom: 3rem;
 }
 
 #project-cards {
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-    gap: 1.5rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
 }
 
 #project-cards .card {
-    -webkit-box-shadow: inset 8px 0px 0px 0px #ffa41d;
-    box-shadow: inset 8px 0px 0px 0px #ffa41d;
+    border-left: 8px solid #ffa41d;
+    height: 200px;
+    grid-template-rows: max-content 1fr max-content;
 }
 
 .section-title {
@@ -118,21 +148,34 @@ main {
     -webkit-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
+    display: grid;
 }
 
 .card>p {
     font-size: .9rem;
     color: #414141;
+    margin: .5rem 0;
 }
 
-#announcement-list {
-    height: 90%;
+.card-options {
+    text-align: right;
 }
+.card-options>* {
+    margin-left: 1rem;
+}
+
+#announcement-list, #trending-list {
+    width: 300px;
+    max-height: 90%;
+}
+
+#announcement-list>hr {
+    height: 1px;
+    border: 1px solid #e6e6e6;
+    margin: 1rem 0;
+}
+
 #announcement-list>article>p {
     font-size: .8rem;
     color: #414141;
-}
-
-#trending-list {
-    height: 100%;
 }
